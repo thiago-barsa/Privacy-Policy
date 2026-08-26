@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Metrit</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #d35400;
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 16px;
+        }
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy – Metrit</h1>
+        <p class="date">Last updated: August 26, 2026</p>
+
+        <p>This Privacy Policy describes how the Metrit application ("we", "our", or "application") collects, uses, processes, and protects users' information when using our monitoring and telemetry services. Our main commitment is to transparency and the strict security of your data, guaranteeing absolute anonymity and confidentiality.</p>
+
+        <h2>1. Collection and Use of Specific Permissions</h2>
+        <p>To perform its core monitoring and device integration functions, Metrit requests the following hardware and system permissions:</p>
+        
+        <ul>
+            <li>
+                <h3>Microphone Access (RECORD_AUDIO)</h3>
+                <strong>Purpose:</strong> Used strictly to act as a sound intensity meter (decibel meter).<br>
+                <strong>Privacy Commitment:</strong> Audio processing occurs exclusively in real-time on the device itself to calculate the sound pressure level. <strong>No audio, voice, or ambient sound is recorded, stored locally, or transmitted to the internet.</strong> The audio stream is immediately discarded from memory after measurement.
+            </li>
+            <li>
+                <h3>Location Access (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION)</h3>
+                <strong>Purpose:</strong> Necessary to identify and manage connectivity and record the geographic position associated with sensor readings for viewing monitoring routes.<br>
+                <strong>Background Use:</strong> The application uses a location-focused foreground service (FOREGROUND_SERVICE_LOCATION) to keep tracking active continuously during user-initiated sessions. This ensures telemetry is not interrupted even when the screen is turned off or the app is minimized.
+            </li>
+            <li>
+                <h3>Camera Access (CAMERA)</h3>
+                <strong>Purpose:</strong> Used exclusively for reading QR Codes, allowing direct and secure pairing between the remote unit and the client unit.<br>
+                <strong>Privacy Commitment:</strong> The application <strong>does not take photographs, does not record videos</strong>, and does not send any image captured by the camera to external servers.
+            </li>
+            <li>
+                <h3>Hardware Sensors and High Frequency (HIGH_SAMPLING_RATE_SENSORS)</h3>
+                <strong>Purpose:</strong> Collection of operational metrics through physical sensors integrated into the device (including accelerometer, gyroscope, and light sensor).<br>
+                <strong>Continuous Execution:</strong> Continuous background collection is actively reported to the user through a persistent notification in the system status bar (FOREGROUND_SERVICE_DATA_SYNC), which can be interrupted at any time.
+            </li>
+        </ul>
+
+        <h2>2. Anonymity, Transmission, and Servers</h2>
+        <p>Metrit's architecture was built on the principle of Privacy by Design:</p>
+        <ul>
+            <li><strong>No Personal Data and Identification by UID:</strong> We <strong>do not collect, require, or store any identifiable personal data</strong>, such as name, phone number, or email address. The identification of the remote unit and the pairing between devices occur exclusively anonymously, through a unique Device Identifier (UID) generated by the system.</li>
+            <li><strong>End-to-End Encryption (E2E):</strong> All sensor, historical, and telemetry data transmitted from the device is protected by End-to-End Encryption. This means that information leaves your device encrypted and can only be decrypted by the authorized client unit.</li>
+            <li><strong>Server Policy and Periodic Deletion:</strong> The traffic and temporary storage of data on our servers occur in a fully obfuscated manner. <strong>Nothing is recorded in clear text (plain text) on our servers.</strong> In addition, the stored encrypted data blocks are <strong>periodically and automatically deleted</strong> from our infrastructure, ensuring there is no prolonged retention of any history.</li>
+        </ul>
+
+        <h2>3. Third-Party Services and APIs</h2>
+        <p>To guarantee the operation of subscriptions and the delivery of alerts, the application integrates SDKs from trusted third-party partners, which operate in accordance with their own privacy policies:</p>
+        <ul>
+            <li><strong>Google Play Services & Google Play Billing:</strong> Necessary for the processing of in-app purchases and core Android infrastructure.</li>
+            <li><strong>RevenueCat:</strong> Used to securely validate receipts and manage the status of the "Metrit Pro" subscription.</li>
+            <li><strong>Firebase Cloud Messaging (FCM):</strong> Provider of the infrastructure for delivering push notifications and alerts to the device.</li>
+        </ul>
+
+        <h2>4. Children's Privacy</h2>
+        <p>Our application and associated services are not directed to children under 13 years of age, and we do not knowingly collect information from children.</p>
+
+        <h2>5. Information Security</h2>
+        <p>Due to the nature of our End-to-End Encryption (E2E), we, as developers, do not possess the cryptographic keys necessary to read the telemetry, location, or sensor metrics of users. The data remains inaccessible to us or any third parties.</p>
+
+        <h2>6. Changes to this Policy</h2>
+        <p>We may update our Privacy Policy periodically to reflect technological, operational changes, or legal requirements. Any changes will become effective as of the publication date indicated at the top of this document.</p>
+
+        <h2>7. Contact and Data Management</h2>
+        <p>Since no personal data is tied to your identity, and all transient history on the servers is periodically and automatically deleted, you can terminate your use of Metrit at any time simply by uninstalling the application from your device.</p>
+        <p>For questions, requests, or further clarifications regarding this Privacy Policy, please contact us via the support email provided on our official page on the Google Play Store.</p>
+    </div>
+</body>
+</html>
